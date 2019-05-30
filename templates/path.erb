@@ -1,0 +1,7 @@
+[Unit]
+<% if @unit_params['Unit'] %><% @unit_params['Unit'].each do |key, value| %><%= key %>=<%= value %><%= "\n" %><% end %><% end %>
+[Path]
+<% if @unit_params['Path'] %><% @unit_params['Path'].each do |key, value| %><%= key %>=<%= value %><%= "\n" %><% end %><% end %>
+<% if @unit_params['Install'] %>[Install]
+<% @unit_params['Install'].each do |key, value| %><%= key %>=<%= value %><%= "\n" %><% end %>
+<% end %>
